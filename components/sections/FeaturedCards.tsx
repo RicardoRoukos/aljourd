@@ -53,11 +53,11 @@ const FeaturedCards: React.FC<FeaturedCardsProps> = ({ scrollToSection }) => {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="group"
+              className="group flex flex-col h-full bg-white rounded-lg shadow-lg"
               whileHover={{ scale: 1.03, y: -8 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="relative h-80 overflow-hidden mb-6 shadow-lg rounded-lg">
+              <div className="relative h-80 overflow-hidden rounded-t-lg">
                 <Image
                   src={card.image}
                   alt={card.title}
@@ -72,14 +72,15 @@ const FeaturedCards: React.FC<FeaturedCardsProps> = ({ scrollToSection }) => {
                 </div>
               </div>
 
-              <p className="text-nature-mahogany mb-4">{card.description}</p>
-
-              <Button
-                className="btn-luxury w-full"
-                onClick={() => scrollToSection(card.id)}
-              >
-                {card.buttonText}
-              </Button>
+              <div className="flex flex-col flex-grow justify-between p-6">
+                <p className="text-nature-mahogany mb-4">{card.description}</p>
+                <Button
+                  className="btn-luxury w-full mt-auto"
+                  onClick={() => scrollToSection(card.id)}
+                >
+                  {card.buttonText}
+                </Button>
+              </div>
             </motion.div>
           ))}
         </div>
