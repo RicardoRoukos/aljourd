@@ -5,24 +5,30 @@ import Image from "next/image";
 import { useRef } from "react";
 const amenities = [
   {
-    label: "Nature Lovers Welcome",
+    label: "Welcome Nature Lovers",
     image: "/images/naturelovers.png",
   },
   {
-    label: "Dogs Allowed",
-    image: "/images/dogsallowed.png",
+    label: "Solar Powered Eco Stay",
+    image: "/images/ecostay.png",
   },
   {
     label: "WiFi Available",
     image: "/images/wifiavailable.png",
   },
   {
-    label: "Showers Available",
+    label: "Hot Showers Available",
     image: "/images/showersavailable.png",
   },
+
   {
-    label: "Campfire Space",
-    image: "/images/ecostay.png",
+    label: "Campfire space",
+    image: "/images/space.png",
+  },
+
+  {
+    label: "Dogs Allowed",
+    image: "/images/dogsallowed.png",
   },
 ];
 
@@ -37,10 +43,10 @@ const Amenities = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container mx-auto px-4">
-          <h2 className="section-heading mb-6 text-center">CAMP AMENITIES</h2>
+          <h2 className="section-heading mb-6 text-center">OUR CAMPSITE</h2>
           <div className="h-1 w-16 bg-nature-gold mx-auto mb-12" />
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 max-w-4xl mx-auto">
             {amenities.map((item, index) => (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}

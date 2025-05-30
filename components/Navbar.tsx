@@ -1,50 +1,75 @@
-// components/Navbar.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
-const sections = ["hero", "about", "activities", "events", "contact"];
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/camp", label: "Camp" },
+];
 
 export const Navbar = () => {
-  const [active, setActive] = useState("hero");
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      for (const id of sections) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            setActive(id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur z-50 shadow-sm">
-      <ul className="flex justify-center gap-8 py-3 text-sm font-medium">
-        {sections.map((sec) => (
-          <li key={sec}>
-            <a
-              href={`#${sec}`}
-              className={clsx(
-                "transition-colors duration-200 hover:text-blue-600",
-                active === sec && "text-blue-600 font-semibold"
-              )}
-            >
-              {sec.charAt(0).toUpperCase() + sec.slice(1)}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-lg">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="text-xl font-bold tracking-wider">AL JOURD</div>
+
+        {/* Desktop Nav */}
+        <ul className="hidden md:flex space-x-8 text-sm font-medium">
+          {navItems.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={clsx(
+                  "transition-colors hover:text-nature-gold",
+                  pathname === href && "text-nature-gold underline"
+                )}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden focus:outline-none text-nature-charcoal"
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Dropdown */}
+      {isOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200 shadow-md">
+          <ul className="flex flex-col space-y-4 p-4 text-sm font-medium">
+            {navItems.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  onClick={() => setIsOpen(false)}
+                  className={clsx(
+                    "block text-nature-charcoal hover:text-nature-gold",
+                    pathname === href && "text-nature-gold underline"
+                  )}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

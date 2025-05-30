@@ -16,6 +16,8 @@ import Events from "../components/sections/Events";
 import FindUs from "../components/sections/FindUs";
 import Footer from "../components/layout/Footer";
 import Header from "@/components/layout/Header";
+import Reviews from "@/components/sections/Reviews";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,12 +75,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-nature-cream text-nature-charcoal">
-      <Header
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        activeSection={activeSection}
-        scrollToSection={scrollToSection}
-      />
+      <Navbar />
 
       <main>
         <Hero
@@ -90,17 +87,16 @@ export default function Home() {
         <FounderStory scrollToSection={scrollToSection} />
         <FeaturedCards scrollToSection={scrollToSection} />
         <Amenities />
-        <About sectionRef={sectionRefs.about} />
-        <Camp sectionRef={sectionRefs.camp} />
-        <Activities sectionRef={sectionRefs.activities} />
-        <Events sectionRef={sectionRefs.events} />
+        <Reviews />
+        {/* <About sectionRef={sectionRefs.about} />
+        <Camp sectionRef={sectionRefs.camp} /> */}
+        {/* <Activities sectionRef={sectionRefs.activities} /> */}
+        {/* <Events sectionRef={sectionRefs.events} />
         <FindUs
           sectionRef={sectionRefs.findUs}
           scrollToSection={scrollToSection}
-        />
+        /> */}
       </main>
-
-      <Footer scrollToSection={scrollToSection} />
     </div>
   );
 }
