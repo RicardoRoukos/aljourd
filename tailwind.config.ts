@@ -61,15 +61,15 @@ const config = {
         // Custom nature-luxe palette
         nature: {
           // Deep forest green
-          forest: "#1a3a2a",
+          forest: "#848d36",
           // Rich mahogany brown
-          mahogany: "#4a2c2a",
+          mahogany: "#562012",
           // Muted gold/amber
-          gold: "#c19a5b",
+          gold: "#c4a94b",
           // Soft sage
-          sage: "#d1d9ce",
+          sage: "#e4e8ce",
           // Cream/ivory
-          cream: "#f8f5f0",
+          cream: "#fefdf8",
           // Deep terracotta
           terracotta: "#a35638",
           // Charcoal

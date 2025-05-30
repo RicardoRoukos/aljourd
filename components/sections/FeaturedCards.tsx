@@ -13,26 +13,26 @@ interface FeaturedCardsProps {
 const cards = [
   {
     id: "camp",
-    image: "/images/camp.jpg",
-    title: "Our Camp",
+    image: "/images/thecampsite.webp",
+    title: "The Campsite",
     description:
-      "Experience the perfect blend of rustic camping and modern comfort at Al Jourd.",
+      "Spend a night or more in our secure, eco-friendly campsite designed with all amenities to host up to 40 guests in authentic, traditional nomadic whool tents",
     buttonText: "Explore Camp",
   },
   {
     id: "activities",
-    image: "/images/activities.jpg",
-    title: "Activities",
+    image: "/images/activities.webp",
+    title: "Ecotourism & Activities",
     description:
-      "Immerse yourself in nature through our carefully curated ecotourism activities.",
+      "A range of educational and eco-friendly activities for all ages designed to offer hands-on experiences and immerse you in the pristine nature and landscape",
     buttonText: "Discover Activities",
   },
   {
     id: "dining",
-    image: "/images/food.jpg",
-    title: "Food & Dining",
+    image: "/images/restaurant.webp",
+    title: "Community Space & Restaurant",
     description:
-      "Enjoy delicious local cuisine prepared with fresh ingredients from our garden.",
+      "The perfect setting to enjoy delicious homemade meals prepared with fresh, locally sourced ingredients, experience authentic local hospitality and connect with linkeminded people",
     buttonText: "Learn About Dining",
   },
 ];

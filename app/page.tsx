@@ -25,9 +25,9 @@ export default function Home() {
   const [currentBanner, setCurrentBanner] = useState(0);
 
   const bannerImages = [
-    "/images/banner-1.jpg",
-    "/images/banner-2.jpg",
-    "/images/banner-3.jpg",
+    "/images/banner-1.webp",
+    "/images/banner-2.webp",
+    "/images/banner-3.webp",
   ];
 
   const sectionRefs = {
@@ -46,24 +46,24 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [bannerImages.length]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
-      setLastScrollY(currentScrollY);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
+  //     setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
+  //     setLastScrollY(currentScrollY);
 
-      Object.entries(sectionRefs).forEach(([key, ref]) => {
-        if (ref.current) {
-          const rect = ref.current.getBoundingClientRect();
-          if (rect.top <= 50 && rect.bottom >= 50) {
-            setActiveSection(key);
-          }
-        }
-      });
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  //     Object.entries(sectionRefs).forEach(([key, ref]) => {
+  //       if (ref.current) {
+  //         const rect = ref.current.getBoundingClientRect();
+  //         if (rect.top <= 50 && rect.bottom >= 50) {
+  //           setActiveSection(key);
+  //         }
+  //       }
+  //     });
+  //   };
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [lastScrollY]);
 
   const scrollToSection = useCallback((sectionId: string) => {
     const el = document.getElementById(sectionId);
@@ -76,7 +76,6 @@ export default function Home() {
       <Header
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
-        scrollDirection={scrollDirection}
         activeSection={activeSection}
         scrollToSection={scrollToSection}
       />

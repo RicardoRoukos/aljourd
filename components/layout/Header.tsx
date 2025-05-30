@@ -2,13 +2,13 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import clsx from "clsx";
 
 type HeaderProps = {
   isMenuOpen: boolean;
   setIsMenuOpen: (open: boolean) => void;
-  scrollDirection: "up" | "down";
+  // scrollDirection: "up" | "down";
   activeSection: string;
   scrollToSection: (id: string) => void;
 };
@@ -18,31 +18,29 @@ const navItems = [
   { id: "about", label: "About" },
   { id: "camp", label: "Camp" },
   { id: "activities", label: "Activities" },
-  { id: "events", label: "Events" },
   { id: "find-us", label: "Find Us" },
 ];
 
 export default function Header({
   isMenuOpen,
   setIsMenuOpen,
-  scrollDirection,
+  // scrollDirection,
   activeSection,
   scrollToSection,
 }: HeaderProps) {
-  const [isSticky, setIsSticky] = useState(false);
+  // const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleSticky = () => setIsSticky(window.scrollY > 10);
-    window.addEventListener("scroll", handleSticky);
-    return () => window.removeEventListener("scroll", handleSticky);
-  }, []);
+  // useEffect(() => {
+  //   const handleSticky = () => setIsSticky(window.scrollY > 10);
+  //   window.addEventListener("scroll", handleSticky);
+  //   return () => window.removeEventListener("scroll", handleSticky);
+  // }, []);
 
   return (
     <header
       className={clsx(
         "fixed top-0 left-0 w-full z-50 transition-transform duration-300",
-        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0",
-        isSticky ? "bg-white/80 backdrop-blur shadow-sm" : "bg-transparent"
+        "bg-white/80 backdrop-blur shadow-sm"
       )}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">

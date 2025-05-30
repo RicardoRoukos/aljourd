@@ -49,9 +49,13 @@ const Hero: React.FC<HeroProps> = ({
       {/* Hero Content */}
       <div className="container mx-auto px-4 z-10 mt-16">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 tracking-wide">
-            AL JOURD
-          </h1>
+          <Image
+            src={"/images/logo.png"}
+            alt="Al Jourd Logo"
+            className="object-cover"
+            width={200}
+            height={200}
+          />
           <div className="h-1 bg-nature-gold mb-6" />
           <p className="text-xl md:text-2xl text-white mb-8 max-w-lg font-light">
             A unique camping experience in the heart of Lebanon's mountains.
@@ -61,14 +65,7 @@ const Hero: React.FC<HeroProps> = ({
               className="bg-nature-forest hover:bg-nature-mahogany text-white rounded-none px-8 py-6 text-lg transition-all duration-300 border-b-2 border-nature-gold"
               onClick={() => scrollToSection("camp")}
             >
-              Explore Camp
-            </Button>
-            <Button
-              variant="ghost"
-              className="border-white text-white hover:bg-white/20 rounded-none px-8 py-6 text-lg transition-all duration-300"
-              onClick={() => scrollToSection("find-us")}
-            >
-              Find Us
+              Explore the campsite
             </Button>
           </div>
         </div>
@@ -92,14 +89,14 @@ const Hero: React.FC<HeroProps> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Instagram className="h-6 w-6 text-white hover:text-nature-gold transition-colors" />
+            <Instagram className="h-8 w-8 text-white hover:text-nature-gold transition-colors" />
           </a>
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Facebook className="h-6 w-6 text-white hover:text-nature-gold transition-colors" />
+            <Facebook className="h-8 w-8 text-white hover:text-nature-gold transition-colors" />
           </a>
         </div>
       </div>
