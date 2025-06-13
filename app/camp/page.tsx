@@ -6,6 +6,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import CampGallery from "./campGallery";
+import CampPackages from "./CampPackages";
+import BookNowCta from "@/components/sections/CTA";
 
 export default function CampPage() {
   const sectionRef = useRef(null);
@@ -54,9 +56,20 @@ export default function CampPage() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-lg text-nature-mahogany"
         >
-          Nestled at 2200m, our eco-camp offers a blend of nomadic charm and
-          modern comfort. Sleep under the stars in traditional tents or eco
-          domes, surrounded by Lebanon’s raw wilderness.
+          Spend a night or more in our secure, eco-friendly campsite and enjoy
+          all the amenities we provide, including our homemade meals made with
+          locally sourced products. Our campsite is equipped with solar panels
+          for electricity and plugs, ensuring you have access to power
+          throughout your stay. Hot water is also available for showers, and you
+          can stay connected with our Wi-Fi access. Our facilities include a
+          shared kitchen adjacent to a small shop selling products from the
+          local community, a dining/living indoor Bedouin tent, and an outdoor
+          area with a bonfire for socializing. For stargazing enthusiasts, we
+          offer a viewpoint area equipped with a telescope. Additionally, we
+          provide 6 shared toilets and showers for your convenience.
+          Accommodation options include 2 tents for 4 persons, 2 Bedouin-style
+          tents for 6 persons, and 2 Bedouin-style tents for 8 persons, all of
+          which are shared accommodations.
         </motion.p>
       </section>
 
@@ -68,6 +81,8 @@ export default function CampPage() {
       >
         <CampGallery />
       </motion.div>
+      <CampPackages />
+      <BookNowCta />
     </>
   );
 }

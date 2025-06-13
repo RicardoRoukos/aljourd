@@ -1,10 +1,7 @@
-// components/sections/FounderStory.tsx
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
-import { Quote, TextQuote } from "lucide-react";
 import { useRef } from "react";
+import Image from "next/image";
 
 type FounderStoryProps = {
   scrollToSection: (id: string) => void;
@@ -23,15 +20,6 @@ const FounderStory: React.FC<FounderStoryProps> = ({ scrollToSection }) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          {/* <motion.h2
-            className="section-heading mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1, duration: 0.6 }}
-          >
-            OUR STORY
-          </motion.h2> */}
-
           <motion.div
             className="h-1 w-16 bg-nature-gold mx-auto mb-8"
             initial={{ opacity: 0, scaleX: 0 }}
@@ -40,25 +28,36 @@ const FounderStory: React.FC<FounderStoryProps> = ({ scrollToSection }) => {
             style={{ transformOrigin: "left" }}
           />
 
-          <motion.p
-            className="text-lg mb-8 text-nature-mahogany"
+          <motion.div
+            className="flex flex-col md:flex-row items-center gap-6 text-left md:text-center"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <span style={{ fontStyle: "italic" }}>
-              My family and I warmly welcome you to our campsite and ecotourism
-              project, nestled in the remote highlands of Jourd Mrebine in North
-              Lebanon. Our sanctuary offers a safe and peaceful environment,
-              immersed in a pristine landscape and surrounded by ancient Juniper
-              trees. It’s a place where guests can truly disconnect from city
-              life and reconnect with their roots and nature in a meaningful,
-              sustainable way.
-            </span>{" "}
-            — Hussein Allaw
-          </motion.p>
+            <Image
+              src="/images/hussein2.webp"
+              alt="Hussein Allaw"
+              width={180}
+              height={180}
+              className="rounded-full object-cover border-4 border-nature-gold shadow-md"
+            />
+
+            <p className="text-lg text-nature-mahogany">
+              <span className="italic">
+                My family and I warmly welcome you to our campsite and
+                ecotourism project, nestled in the remote highlands of Jourd
+                Mrebine in North Lebanon. Our sanctuary offers a safe and
+                peaceful environment, immersed in a pristine landscape and
+                surrounded by ancient Juniper trees. It’s a place where guests
+                can truly disconnect from city life and reconnect with their
+                roots and nature in a meaningful, sustainable way.
+              </span>{" "}
+              — Hussein Allaw
+            </p>
+          </motion.div>
 
           <motion.div
+            className="mt-8"
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.6 }}

@@ -11,7 +11,7 @@ interface CampProps {
 }
 
 const Camp: React.FC<CampProps> = ({ sectionRef }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement | null>(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
@@ -19,7 +19,7 @@ const Camp: React.FC<CampProps> = ({ sectionRef }) => {
       id="camp"
       ref={(el) => {
         ref.current = el;
-        if (sectionRef) sectionRef.current = el;
+        if (sectionRef && el) sectionRef.current = el;
       }}
       className="py-20 bg-white text-nature-charcoal"
     >

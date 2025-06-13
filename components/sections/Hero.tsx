@@ -1,58 +1,43 @@
-// components/sections/Hero.tsx
 "use client";
 
-import Image from "next/image";
 import { ChevronDown, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 
 type HeroProps = {
-  bannerImages: string[];
-  currentBanner: number;
   scrollToSection: (id: string) => void;
   sectionRef: React.RefObject<HTMLDivElement>;
 };
 
-const Hero: React.FC<HeroProps> = ({
-  bannerImages,
-  currentBanner,
-  scrollToSection,
-  sectionRef,
-}) => {
+const Hero: React.FC<HeroProps> = ({ scrollToSection, sectionRef }) => {
   return (
     <section
       ref={sectionRef}
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Banners */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        {bannerImages.map((img, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              currentBanner === index ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={img || "/placeholder.svg"}
-              alt={`Al Jourd Mountains ${index + 1}`}
-              fill
-              className="object-cover"
-              priority={index === 0}
-            />
-          </div>
-        ))}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/banner.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Hero Content */}
       <div className="container mx-auto px-4 z-10 mt-16">
         <div className="max-w-3xl">
-          <Image
-            src={"/images/logo.png"}
+          <img
+            src="/images/logo.png"
             alt="Al Jourd Logo"
-            className="object-cover"
+            className="object-cover mb-4"
             width={200}
             height={200}
           />

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -10,6 +11,8 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/camp", label: "Camp" },
+  { href: "/ecotourism", label: "Eco Tourism and activities" },
+  { href: "/find-us", label: "Find Us" },
 ];
 
 export const Navbar = () => {
@@ -21,7 +24,16 @@ export const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-lg">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold tracking-wider">AL JOURD</div>
+        <div className="text-xl font-bold tracking-wider">
+          {" "}
+          <Image
+            src={"/images/logo.png"}
+            alt="Al Jourd Logo"
+            className="object-cover"
+            width={100}
+            height={100}
+          />
+        </div>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-8 text-sm font-medium">

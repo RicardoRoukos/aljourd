@@ -1,36 +1,37 @@
-import React, { useEffect } from "react";
+"use client";
 
-const Reviews = () => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
+import { useEffect } from "react";
 
+const GoogleReviews = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
-      "https://cdn.trustindex.io/loader.js?dbdac9f4783c3244736637dc885";
+    script.src = "https://static.elfsight.com/platform/platform.js";
     script.async = true;
     script.defer = true;
-
-    if (containerRef.current) {
-      containerRef.current.appendChild(script);
-    }
+    document.body.appendChild(script);
 
     return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = "";
-      }
+      document.body.removeChild(script);
     };
   }, []);
 
   return (
-    <section className="py-16 bg-white text-center">
-      <h2 className="section-heading mb-8">What Our Guests Say</h2>
+    <section
+      id="reviews"
+      className="py-16 bg-white text-nature-charcoal text-center"
+    >
+      <h2 className="text-2xl font-serif font-semibold mb-4">
+        What People Say
+      </h2>
+      <div className="h-1 w-16 bg-nature-gold mx-auto mb-8" />
+
+      {/* Elfsight widget container */}
       <div
-        ref={containerRef}
-        className="trustindex-widget"
-        data-ti="dbdac9f4783c3244736637dc885"
-      />
+        className="elfsight-app-e2d160ad-290d-43ee-b46a-2404d55ac0e2"
+        data-elfsight-app-lazy
+      ></div>
     </section>
   );
 };
 
-export default Reviews;
+export default GoogleReviews;

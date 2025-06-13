@@ -5,7 +5,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import Hero from "../components/sections/Hero";
+import Hero from "../components/sections/HeroPictures";
 import FounderStory from "../components/sections/FounderStory";
 import FeaturedCards from "../components/sections/FeaturedCards";
 import Amenities from "../components/sections/Amenities";
@@ -15,7 +15,7 @@ import Activities from "../components/sections/Activities";
 import Events from "../components/sections/Events";
 import FindUs from "../components/sections/FindUs";
 import Footer from "../components/layout/Footer";
-import Header from "@/components/layout/Header";
+// import Header from "../components/layout/Header";
 import Reviews from "@/components/sections/Reviews";
 import { Navbar } from "@/components/Navbar";
 
