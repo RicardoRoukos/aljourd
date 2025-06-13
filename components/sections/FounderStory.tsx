@@ -3,6 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
+import { Quote, TextQuote } from "lucide-react";
 import { useRef } from "react";
 
 type FounderStoryProps = {
@@ -22,14 +23,14 @@ const FounderStory: React.FC<FounderStoryProps> = ({ scrollToSection }) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
+          {/* <motion.h2
             className="section-heading mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
             OUR STORY
-          </motion.h2>
+          </motion.h2> */}
 
           <motion.div
             className="h-1 w-16 bg-nature-gold mx-auto mb-8"
@@ -45,10 +46,16 @@ const FounderStory: React.FC<FounderStoryProps> = ({ scrollToSection }) => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Founded with a passion for nature and community, Al Jourd was
-            established to create a sanctuary where people can reconnect with
-            the natural world while preserving the beauty of Lebanon's
-            mountains.
+            <span style={{ fontStyle: "italic" }}>
+              My family and I warmly welcome you to our campsite and ecotourism
+              project, nestled in the remote highlands of Jourd Mrebine in North
+              Lebanon. Our sanctuary offers a safe and peaceful environment,
+              immersed in a pristine landscape and surrounded by ancient Juniper
+              trees. It’s a place where guests can truly disconnect from city
+              life and reconnect with their roots and nature in a meaningful,
+              sustainable way.
+            </span>{" "}
+            — Hussein Allaw
           </motion.p>
 
           <motion.div

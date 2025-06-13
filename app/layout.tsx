@@ -1,38 +1,40 @@
-import type React from "react"
-import "@/app/globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+// app/layout.tsx
+
+import "@/app/globals.css";
+import type { ReactNode } from "react";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "Al Jourd - Unique Mountain Camping Experience in Lebanon",
-  description: "Experience nature's beauty in our serene camping retreat in the heart of Lebanon's mountains.",
-    generator: 'v0.dev'
-}
+  description:
+    "Experience nature's beauty in our serene camping retreat in the heart of Lebanon's mountains.",
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Add Google Fonts using standard link tags */}
+        {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-          rel="stylesheet"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

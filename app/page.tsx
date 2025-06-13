@@ -16,6 +16,8 @@ import Events from "../components/sections/Events";
 import FindUs from "../components/sections/FindUs";
 import Footer from "../components/layout/Footer";
 import Header from "@/components/layout/Header";
+import Reviews from "@/components/sections/Reviews";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,9 +27,9 @@ export default function Home() {
   const [currentBanner, setCurrentBanner] = useState(0);
 
   const bannerImages = [
-    "/images/banner-1.jpg",
-    "/images/banner-2.jpg",
-    "/images/banner-3.jpg",
+    "/images/banner-1.webp",
+    "/images/banner-2.webp",
+    "/images/banner-3.webp",
   ];
 
   const sectionRefs = {
@@ -46,24 +48,24 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [bannerImages.length]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
-      setLastScrollY(currentScrollY);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
+  //     setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
+  //     setLastScrollY(currentScrollY);
 
-      Object.entries(sectionRefs).forEach(([key, ref]) => {
-        if (ref.current) {
-          const rect = ref.current.getBoundingClientRect();
-          if (rect.top <= 50 && rect.bottom >= 50) {
-            setActiveSection(key);
-          }
-        }
-      });
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  //     Object.entries(sectionRefs).forEach(([key, ref]) => {
+  //       if (ref.current) {
+  //         const rect = ref.current.getBoundingClientRect();
+  //         if (rect.top <= 50 && rect.bottom >= 50) {
+  //           setActiveSection(key);
+  //         }
+  //       }
+  //     });
+  //   };
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [lastScrollY]);
 
   const scrollToSection = useCallback((sectionId: string) => {
     const el = document.getElementById(sectionId);
@@ -73,13 +75,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-nature-cream text-nature-charcoal">
-      <Header
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        scrollDirection={scrollDirection}
-        activeSection={activeSection}
-        scrollToSection={scrollToSection}
-      />
+      <Navbar />
 
       <main>
         <Hero
@@ -91,17 +87,16 @@ export default function Home() {
         <FounderStory scrollToSection={scrollToSection} />
         <FeaturedCards scrollToSection={scrollToSection} />
         <Amenities />
-        <About sectionRef={sectionRefs.about} />
-        <Camp sectionRef={sectionRefs.camp} />
-        <Activities sectionRef={sectionRefs.activities} />
-        <Events sectionRef={sectionRefs.events} />
+        <Reviews />
+        {/* <About sectionRef={sectionRefs.about} />
+        <Camp sectionRef={sectionRefs.camp} /> */}
+        {/* <Activities sectionRef={sectionRefs.activities} /> */}
+        {/* <Events sectionRef={sectionRefs.events} />
         <FindUs
           sectionRef={sectionRefs.findUs}
           scrollToSection={scrollToSection}
-        />
+        /> */}
       </main>
-
-      <Footer scrollToSection={scrollToSection} />
     </div>
   );
 }
