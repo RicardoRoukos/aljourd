@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               href="/ecotourism"
               className="hover:text-nature-gold transition"
             >
-              Ecot Tourism and activities
+              Eco Tourism and activities
             </Link>
             <Link href="/find-us" className="hover:text-nature-gold transition">
               Find Us
