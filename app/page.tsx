@@ -5,7 +5,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import Hero from "../components/sections/HeroPictures";
+import Hero from "../components/sections/Hero";
 import FounderStory from "../components/sections/FounderStory";
 import FeaturedCards from "../components/sections/FeaturedCards";
 import Amenities from "../components/sections/Amenities";
