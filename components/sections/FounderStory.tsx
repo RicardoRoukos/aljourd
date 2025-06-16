@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type FounderStoryProps = {
   scrollToSection: (id: string) => void;
@@ -62,12 +63,13 @@ const FounderStory: React.FC<FounderStoryProps> = ({ scrollToSection }) => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <Button
-              className="btn-luxury"
+            <Link
+              href="/about"
+              className="btn-luxury py-4 px-8 text-lg font-semibold bg-nature-gold text-nature-charcoal hover:bg-nature-mahogany transition-colors duration-300"
               onClick={() => scrollToSection("about")}
             >
               Learn More About Us
-            </Button>
+            </Link>
           </motion.div>
         </div>
       </motion.div>

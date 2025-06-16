@@ -3,6 +3,7 @@
 import { ChevronDown, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
+import Link from "next/link";
 
 type HeroProps = {
   scrollToSection: (id: string) => void;
@@ -23,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection, sectionRef }) => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-120 object-cover"
         >
           <source src="/banner.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -34,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection, sectionRef }) => {
       {/* Hero Content */}
       <div className="container mx-auto px-4 z-10 mt-16">
         <div className="max-w-3xl">
-          <img
+          {/* <img
             src="/images/logo.png"
             alt="Al Jourd Logo"
             className="object-cover mb-4"
@@ -44,14 +45,14 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection, sectionRef }) => {
           <div className="h-1 bg-nature-gold mb-6" />
           <p className="text-xl md:text-2xl text-white mb-8 max-w-lg font-light">
             A unique camping experience in the heart of Lebanon's mountains.
-          </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button
-              className="bg-nature-forest hover:bg-nature-mahogany text-white rounded-none px-8 py-6 text-lg transition-all duration-300 border-b-2 border-nature-gold"
-              onClick={() => scrollToSection("camp")}
+          </p> */}
+          <div className="flex flex-col sm:flex-row space-y-4  sm:space-y-0 sm:space-x-4 mt-[75vh]">
+            <Link
+              href="/camp"
+              className="bg-nature-forest hover:bg-nature-mahogany text-white rounded-none px-8 py-4 text-lg transition-all duration-300 border-b-2 border-nature-gold"
             >
               Explore the campsite
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

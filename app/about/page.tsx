@@ -6,7 +6,7 @@ import AboutGallery from "./aboutGallery";
 export default function AboutPage() {
   return (
     <section id="about" className="py-20 bg-nature-cream text-nature-charcoal">
-      <div className="container mx-auto px-4 max-w-4xl text-center">
+      <div className="container mx-auto px-4 max-w-4xl text-center mt-40">
         <motion.h2
           className="section-heading mb-6"
           initial={{ opacity: 0, y: 40 }}

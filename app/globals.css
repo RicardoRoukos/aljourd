@@ -124,3 +124,7 @@
 .btn-luxury-outline {
   @apply border border-nature-gold text-nature-forest hover:bg-nature-gold/10 rounded-none transition-all duration-300;
 }
+
+.secondary-text {
+  color: rgb(86 32 18 / var(--tw-bg-opacity, 1))
+}

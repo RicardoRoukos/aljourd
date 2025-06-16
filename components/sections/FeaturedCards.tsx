@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { link } from "fs";
+import Link from "next/link";
 
 interface FeaturedCardsProps {
   scrollToSection: (id: string) => void;
@@ -18,6 +20,7 @@ const cards = [
     description:
       "Spend a night or more in our secure, eco-friendly campsite designed with all amenities to host up to 40 guests in authentic, traditional nomadic whool tents",
     buttonText: "Explore Camp",
+    link: "/camp",
   },
   {
     id: "activities",
@@ -26,6 +29,7 @@ const cards = [
     description:
       "A range of educational and eco-friendly activities for all ages designed to offer hands-on experiences and immerse you in the pristine nature and landscape",
     buttonText: "Discover Activities",
+    link: "/ecotourism",
   },
   {
     id: "dining",
@@ -34,6 +38,7 @@ const cards = [
     description:
       "The perfect setting to enjoy delicious homemade meals prepared with fresh, locally sourced ingredients, experience authentic local hospitality and connect with linkeminded people",
     buttonText: "Learn About Dining",
+    link: "/camp",
   },
 ];
 
@@ -74,12 +79,12 @@ const FeaturedCards: React.FC<FeaturedCardsProps> = ({ scrollToSection }) => {
 
               <div className="flex flex-col flex-grow justify-between p-6">
                 <p className="text-nature-mahogany mb-4">{card.description}</p>
-                <Button
-                  className="btn-luxury w-full mt-auto"
-                  onClick={() => scrollToSection(card.id)}
+                <Link
+                  className="btn-luxury w-full mt-auto py-2 px-8 text-lg font-semibold bg-nature-gold text-nature-charcoal hover:bg-nature-mahogany transition-colors duration-300"
+                  href={card.link}
                 >
                   {card.buttonText}
-                </Button>
+                </Link>
               </div>
             </motion.div>
           ))}

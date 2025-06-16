@@ -117,7 +117,7 @@ const CampPackages = () => {
           </div>
         ))}
 
-        <p className="text-center text-sm mt-12 text-nature-charcoal/80">
+        <p className="text-center text-xl font-bold mt-12 text-nature-charcoal/80">
           50% discount for Kids under 12 on all accommodation and meals. <br />
           10% discount for stays of 2 nights and above for both adults & kids.
         </p>

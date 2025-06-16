@@ -78,11 +78,11 @@ export default function CampPage() {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.7, delay: 0.2 }}
-      >
-        <CampGallery />
-      </motion.div>
+      ></motion.div>
       <CampPackages />
+
       <BookNowCta />
+      <CampGallery />
     </>
   );
 }

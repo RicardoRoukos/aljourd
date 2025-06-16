@@ -36,9 +36,9 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-8 text-sm font-medium">
+        <ul className="hidden md:flex space-x-8 text-m font-bold">
           {navItems.map(({ href, label }) => (
-            <li key={href}>
+            <li key={href} className="secondary-text">
               <Link
                 href={href}
                 className={clsx(
