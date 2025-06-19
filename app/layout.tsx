@@ -5,6 +5,10 @@ import type { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/layout/Footer";
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Nunito:wght@300;400;600&display=swap"
+  rel="stylesheet"
+/>;
 
 export const metadata = {
   title: "Al Jourd - Unique Mountain Camping Experience in Lebanon",
@@ -24,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Nunito:wght@300;400;600&display=swap"
           rel="stylesheet"
         />
       </head>

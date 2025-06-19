@@ -30,7 +30,7 @@ export default function AboutPage() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           Hello! I’m Hussein Allaw, founder and protector of Al Jourd Ghandi &
-          Houssam Allaw Nature Reserve, & your host at Al Jourd Ecotourism &
+          Houssam Allaw Nature Reserve & your host at Al Jourd Ecotourism &
           Campsite project nestled at 2200 m altitude in the remote highlands
           intersecting between the regions of Dennieh, Hermel and Akkar. This
           sanctuary is a tribute to my only son Ghandi and his cousin Houssam,

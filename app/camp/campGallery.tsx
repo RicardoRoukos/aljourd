@@ -110,7 +110,7 @@ export default function CampGallery() {
   return (
     <div className="container mx-auto px-4 pb-16">
       <h2 className="text-2xl font-serif font-semibold mb-6 text-center">
-        Camp Gallery
+        Gallery
       </h2>
       <ImageGallery
         items={images}

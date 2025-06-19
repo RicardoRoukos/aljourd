@@ -24,7 +24,7 @@ export default function CampPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        {/* <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -33,7 +33,7 @@ export default function CampPage() {
           >
             Our Camp
           </motion.h1>
-        </div>
+        </div> */}
       </section>
 
       {/* Content Section */}

@@ -34,7 +34,7 @@ const cards = [
   {
     id: "dining",
     image: "/images/restaurant.webp",
-    title: "Community Space & Restaurant",
+    title: "Community space & kitchen",
     description:
       "The perfect setting to enjoy delicious homemade meals prepared with fresh, locally sourced ingredients, experience authentic local hospitality and connect with linkeminded people",
     buttonText: "Learn About Dining",

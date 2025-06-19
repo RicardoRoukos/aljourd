@@ -47,13 +47,14 @@ const FounderStory: React.FC<FounderStoryProps> = ({ scrollToSection }) => {
               <span className="italic">
                 My family and I warmly welcome you to our campsite and
                 ecotourism project, nestled in the remote highlands of Jourd
-                Mrebine in North Lebanon. Our sanctuary offers a safe and
-                peaceful environment, immersed in a pristine landscape and
-                surrounded by ancient Juniper trees. It’s a place where guests
-                can truly disconnect from city life and reconnect with their
-                roots and nature in a meaningful, sustainable way.
+                Mrebine in North Lebanon.
+                <br /> Our sanctuary offers a safe and peaceful environment,
+                immersed in a pristine landscape and surrounded by ancient
+                Juniper trees. It’s a place where guests can truly disconnect
+                from city life and reconnect with their roots and nature in a
+                meaningful, sustainable way.
               </span>{" "}
-              — Hussein Allaw
+              <br />— Hussein Allaw
             </p>
           </motion.div>
 

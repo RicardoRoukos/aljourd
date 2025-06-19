@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRef } from "react";
 const amenities = [
   {
-    label: "Welcome Nature Lovers",
+    label: "Clean Nature Environment”",
     image: "/images/naturelovers.png",
   },
   {

@@ -24,7 +24,8 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection, sectionRef }) => {
           loop
           muted
           playsInline
-          className="w-full h-120 object-cover"
+          className="w-full h-full object-cover"
+          poster="/images/banner-1.webp"
         >
           <source src="/banner.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -33,37 +34,18 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection, sectionRef }) => {
       </div>
 
       {/* Hero Content */}
-      <div className="container mx-auto px-4 z-10 mt-16">
-        <div className="max-w-3xl">
-          {/* <img
-            src="/images/logo.png"
-            alt="Al Jourd Logo"
-            className="object-cover mb-4"
-            width={200}
-            height={200}
-          />
-          <div className="h-1 bg-nature-gold mb-6" />
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-lg font-light">
-            A unique camping experience in the heart of Lebanon's mountains.
-          </p> */}
-          <div className="flex flex-col sm:flex-row space-y-4  sm:space-y-0 sm:space-x-4 mt-[75vh]">
-            <Link
-              href="/camp"
-              className="bg-nature-forest hover:bg-nature-mahogany text-white rounded-none px-8 py-4 text-lg transition-all duration-300 border-b-2 border-nature-gold"
-            >
-              Explore the campsite
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center space-y-4 px-4 w-full">
+        <Link
+          href="/camp"
+          className="bg-nature-forest hover:bg-nature-mahogany text-white text-center rounded-none px-8 py-4 text-lg transition-all duration-300 border-b-2 border-nature-gold"
+        >
+          Explore the campsite
+        </Link>
         <div className="flex flex-col items-center">
-          <span className="text-white text-sm mb-2 font-light tracking-wider">
+          <span className="text-white text-sm font-light tracking-wider">
             Scroll Down
           </span>
-          <ChevronDown className="h-6 w-6 text-white" />
+          <ChevronDown className="h-5 w-5 text-white" />
         </div>
       </div>
 

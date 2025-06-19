@@ -25,7 +25,7 @@ export default function EcoTourisn() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+        {/* <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -34,7 +34,7 @@ export default function EcoTourisn() {
           >
             Eco Tourism and Activities
           </motion.h1>
-        </div>
+        </div> */}
       </section>
 
       {/* Content Section */}
@@ -42,14 +42,14 @@ export default function EcoTourisn() {
         ref={sectionRef}
         className="container mx-auto px-4 py-12 max-w-5xl text-center"
       >
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-2xl font-serif font-semibold mb-4"
         >
           Experience Rustic Comfort
-        </motion.h2>
+        </motion.h2> */}
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

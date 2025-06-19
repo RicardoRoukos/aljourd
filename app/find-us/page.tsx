@@ -20,7 +20,7 @@ export default function FindUsPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        {/* <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -28,8 +28,8 @@ export default function FindUsPage() {
             className="text-white text-4xl font-serif font-bold"
           >
             Contact Us
-          </motion.h1>
-        </div>
+          </motion.h1> */}
+        {/* </div> */}
       </section>
 
       {/* Info Section */}
@@ -42,7 +42,7 @@ export default function FindUsPage() {
         >
           {/* Left: Info + Map */}
           <div>
-            <h2 className="text-2xl font-serif mb-4">Reach Us</h2>
+            <h2 className="text-2xl font-serif mb-4">Contact Us</h2>
             <div className="space-y-3 text-nature-mahogany text-sm">
               <div className="flex items-center gap-3">
                 <MapPin className="w-5 h-5" />
@@ -54,7 +54,7 @@ export default function FindUsPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5" />
-                <span>info@aljourd.com</span>
+                <span>pia.abboud@hotmail.com</span>
               </div>
             </div>
 
