@@ -104,6 +104,136 @@ const images = [
     thumbnail: "/images/camp21.webp",
     // description: "Inside view of a nomadic tent",
   },
+  {
+    original: "/images/camp (1).webp",
+    thumbnail: "/images/camp (1).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (1).webp",
+    thumbnail: "/images/camp (1).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (2).webp",
+    thumbnail: "/images/camp (2).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (3).webp",
+    thumbnail: "/images/camp (3).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (4).webp",
+    thumbnail: "/images/camp (4).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (5).webp",
+    thumbnail: "/images/camp (5).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (6).webp",
+    thumbnail: "/images/camp (6).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (7).webp",
+    thumbnail: "/images/camp (7).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (8).webp",
+    thumbnail: "/images/camp (8).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (9).webp",
+    thumbnail: "/images/camp (9).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (10).webp",
+    thumbnail: "/images/camp (10).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/camp (11).webp",
+    thumbnail: "/images/camp (11).webp",
+    // description: "Inside view of a nomadic tent",
+  },
+  {
+    original: "/images/kitchen (1).webp",
+    thumbnail: "/images/kitchen (1).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (2).webp",
+    thumbnail: "/images/kitchen (2).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (3).webp",
+    thumbnail: "/images/kitchen (3).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (4).webp",
+    thumbnail: "/images/kitchen (4).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (5).webp",
+    thumbnail: "/images/kitchen (5).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (6).webp",
+    thumbnail: "/images/kitchen (6).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (7).webp",
+    thumbnail: "/images/kitchen (7).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (8).webp",
+    thumbnail: "/images/kitchen (8).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (9).webp",
+    thumbnail: "/images/kitchen (9).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (10).webp",
+    thumbnail: "/images/kitchen (10).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (11).webp",
+    thumbnail: "/images/kitchen (11).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (12).webp",
+    thumbnail: "/images/kitchen (12).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (13).webp",
+    thumbnail: "/images/kitchen (13).webp",
+    // description: "Snow season at Al Jourd",
+  },
+  {
+    original: "/images/kitchen (14).webp",
+    thumbnail: "/images/kitchen (14).webp",
+    // description: "Snow season at Al Jourd",
+  },
 ];
 
 export default function CampGallery() {
@@ -118,7 +248,6 @@ export default function CampGallery() {
         showFullscreenButton={true}
         showThumbnails={true}
         autoPlay={true}
-        slideInterval={5000}
       />
     </div>
   );

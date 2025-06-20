@@ -95,6 +95,13 @@
   font-display: swap;
 }
 
+.image-gallery-thumbnail img {
+  width: 100px !important;
+  height: 70px !important;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
 .font-cursive {
   font-family: "Cursive", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
     sans-serif;

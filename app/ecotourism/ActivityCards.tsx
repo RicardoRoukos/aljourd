@@ -8,42 +8,42 @@ const activities = [
   {
     title: "Hiking",
     price: "From $50 / Group",
-    image: "/images/hiking.webp",
+    image: "/images/Ecotouirsm_activties.webp",
     description:
       "Guided hikes tailored to your group’s size and interest, exploring nearby forests and peaks. Prices vary by group size. Led by local mountain guides and coordinated with homestays or eco-lodges.",
   },
   {
     title: "Art Workshop",
     price: "$12 / Person",
-    image: "/images/art.webp",
+    image: "/images/art_workshop_aljourd.webp",
     description:
       "Led by Hussein, abstract artist and professor, using all professional painting tools and materials. Guests artists occasionally hosted. Inspired by the surrounding nature.",
   },
   {
     title: "Stargazing Session",
     price: "$10 / Person (Min 4)",
-    image: "/images/stars.webp",
+    image: "/images/stargazing_activity_aljourd.webp",
     description:
       "Held weekly in our dark sky zone. Organized with the Lebanese Astronomy Group. Private or public sessions available. Ideal for astrophotography and night sky lovers.",
   },
   {
     title: "Yoga & Holistic Sessions",
     price: "$15 / Person (Min 4)",
-    image: "/images/yoga.webp",
+    image: "/images/yoga_meditation.webp",
     description:
       "We host weekly holistic talks, yoga & meditation sessions. Private sessions tailored to your group are also available. Check our summer calendar for updates.",
   },
   {
     title: "Adopt a Juniper",
     price: "$30 / Tree",
-    image: "/images/juniper.webp",
+    image: "/images/tree_plantation_aljourd.webp",
     description:
       "Plant and adopt a 3-year-old Juniper tree in our private reserve. Receive a certificate and GPS coordinates. Contribute to long-term conservation.",
   },
   {
     title: "Youth Workshops",
     price: "Custom",
-    image: "/images/workshops.webp",
+    image: "/images/Youth_programs_aljourd.webp",
     description:
       "Educational workshops on biodiversity, upcycling, DIY, and sustainable living. Great for school groups and awareness campaigns. Tailored to youth needs.",
   },

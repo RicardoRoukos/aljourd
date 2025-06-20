@@ -14,7 +14,7 @@ export default function FindUsPage() {
       {/* Banner */}
       <section className="relative h-[50vh] w-full">
         <Image
-          src="/images/acamp4   .webp"
+          src="/images/banner_findus.webp"
           alt="Contact Banner"
           fill
           className="object-cover"

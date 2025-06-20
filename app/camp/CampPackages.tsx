@@ -12,14 +12,14 @@ const packages = [
       {
         title: "In Our Tent",
         price: "$70 / Adult / Night",
-        image: "/images/acamp1.webp",
+        image: "/images/package_in_our_tent.webp",
         description:
           "Breakfast, Lunch, Dinner, 1 spot in shared furnished tent with mattress, sheets, pillows, cover, electricity access, shared showers & toilets. Alcohol extra.",
       },
       {
         title: "In Your Tent",
         price: "$50 / Adult / Night",
-        image: "/images/acamp2.webp",
+        image: "/images/package_inyourtent.webp",
         description:
           "Breakfast, Lunch, Dinner, land rental for your tent, electricity access, shared showers & toilets. Alcohol extra.",
       },
@@ -31,14 +31,14 @@ const packages = [
       {
         title: "In Our Tent",
         price: "$25 / Person / Night",
-        image: "/images/acamp3.webp",
+        image: "/images/camp_in_ourtent.webp",
         description:
           "1 spot in shared furnished tent with mattress, sheets, pillows, cover, electricity access, shared showers & toilets.",
       },
       {
         title: "In Your Tent",
         price: "$10 / Person / Night",
-        image: "/images/acamp4.webp",
+        image: "/images/camp_inyourtent.webp",
         description:
           "Land rental for your tent, access to electricity, shared showers & toilets.",
       },
@@ -50,14 +50,14 @@ const packages = [
       {
         title: "Breakfast",
         price: "$10 / Adult",
-        image: "/images/rest1.webp",
+        image: "/images/breakfast.webp",
         description:
           "Foul, Manakich, Kechek, eggs, seasonal vegetables, labneh, cheese, olives, makdous, jam, tea, coffee, water.",
       },
       {
         title: "Lunch or Dinner",
         price: "$20 / Adult",
-        image: "/images/rest2.webp",
+        image: "/images/lunch_ordinner.webp",
         description:
           "Homemade stew or grilled trout/beef, salad, hommous, moutabbal, potatoes, vegetables, soft drinks, water. Alcohol extra.",
       },

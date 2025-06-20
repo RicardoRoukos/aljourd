@@ -18,7 +18,7 @@ export default function CampPage() {
       {/* Banner Section */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="/images/banner.webp"
+          src="/images/banner_aljourdsunset.webp"
           alt="Camp Banner"
           fill
           className="object-cover"
