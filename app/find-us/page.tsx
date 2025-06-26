@@ -4,10 +4,15 @@ import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
+import { useForm, ValidationError } from "@formspree/react";
 export default function FindUsPage() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const [state, handleSubmit] = useForm("mgvypdry");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
 
   return (
     <>
@@ -72,27 +77,35 @@ export default function FindUsPage() {
           {/* Right: Contact Form */}
           <div>
             <h2 className="text-2xl font-serif mb-4">Send a Message</h2>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Message sent!");
-              }}
-              className="space-y-4"
-            >
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm mb-1">Name</label>
                 <input
+                  id="name"
+                  name="name"
                   type="text"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded"
+                />
+                <ValidationError
+                  prefix="Name"
+                  field="name"
+                  errors={state.errors}
                 />
               </div>
               <div>
                 <label className="block text-sm mb-1">Email</label>
                 <input
+                  id="email"
                   type="email"
+                  name="email"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded"
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
                 />
               </div>
               <div>
@@ -100,10 +113,18 @@ export default function FindUsPage() {
                 <textarea
                   rows={5}
                   required
+                  id="message"
+                  name="message"
                   className="w-full px-4 py-2 border border-gray-300 rounded"
                 />
               </div>
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
               <button
+                disabled={state.submitting}
                 type="submit"
                 className="bg-nature-forest hover:bg-nature-mahogany text-white px-6 py-3 rounded transition"
               >
