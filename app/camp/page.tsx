@@ -16,12 +16,12 @@ export default function CampPage() {
   return (
     <>
       {/* Banner Section */}
-      <section className="relative h-[60vh] w-full">
+      <section className="relative h-[80vh] w-full">
         <Image
           src="/images/banner_aljourdsunset.webp"
           alt="Camp Banner"
           fill
-          className="object-cover"
+          className="object-cover object-center md:object-[center_-250px]"
           priority
         />
         {/* <div className="absolute inset-0 bg-black/40 flex items-center justify-center">

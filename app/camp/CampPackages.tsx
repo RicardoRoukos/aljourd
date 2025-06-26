@@ -13,13 +13,15 @@ const packages = [
         title: "In Our Tent",
         price: "$70 / Adult / Night",
         image: "/images/package_in_our_tent.webp",
+        className: "object-cover ",
         description:
           "Breakfast, Lunch, Dinner, 1 spot in shared furnished tent with mattress, sheets, pillows, cover, electricity access, shared showers & toilets. Alcohol extra.",
       },
       {
         title: "In Your Tent",
         price: "$50 / Adult / Night",
-        image: "/images/package_inyourtent.webp",
+        image: "/images/package_inyourtent.webp ",
+        className: "object-cover md:object-[center_-500px]",
         description:
           "Breakfast, Lunch, Dinner, land rental for your tent, electricity access, shared showers & toilets. Alcohol extra.",
       },
@@ -32,6 +34,7 @@ const packages = [
         title: "In Our Tent",
         price: "$25 / Person / Night",
         image: "/images/camp_in_ourtent.webp",
+        className: `object-cover md:object-[center_-450px]`,
         description:
           "1 spot in shared furnished tent with mattress, sheets, pillows, cover, electricity access, shared showers & toilets.",
       },
@@ -39,6 +42,7 @@ const packages = [
         title: "In Your Tent",
         price: "$10 / Person / Night",
         image: "/images/camp_inyourtent.webp",
+        className: `object-cover md:object-[center_-150px] `,
         description:
           "Land rental for your tent, access to electricity, shared showers & toilets.",
       },
@@ -51,6 +55,7 @@ const packages = [
         title: "Breakfast",
         price: "$10 / Adult",
         image: "/images/breakfast.webp",
+        className: "object-cover",
         description:
           "Foul, Manakich, Kechek, eggs, seasonal vegetables, labneh, cheese, olives, makdous, jam, tea, coffee, water.",
       },
@@ -58,6 +63,7 @@ const packages = [
         title: "Lunch or Dinner",
         price: "$20 / Adult",
         image: "/images/lunch_ordinner.webp",
+        className: "object-cover md:object-[center_-400px]",
         description:
           "Homemade stew or grilled trout/beef, salad, hommous, moutabbal, potatoes, vegetables, soft drinks, water. Alcohol extra.",
       },
@@ -98,7 +104,7 @@ const CampPackages = () => {
                         src={opt.image}
                         alt={opt.title}
                         fill
-                        className="object-cover"
+                        className={opt.className}
                       />
                     </div>
                     <div className="p-6">
